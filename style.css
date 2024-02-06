@@ -1,41 +1,70 @@
-/* Container adjustments for centering */
+/* General reset and body styling for a clean look */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* Unified container style for centering and adding subtle shadow for depth */
 .container {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    text-align: center; /* Center text */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    text-align: center;
 }
 
-/* Headings centered */
+/* Styling for headings and links to ensure visual hierarchy and readability */
 h1 {
-    font-size: 24px;
-    color: #333;
     margin-bottom: 20px;
+    color: #333;
 }
 
-/* List adjustments for centering */
+h1 a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+h1 a:hover, h1 a:focus {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* List styling for a clean and modern look */
 .links-list {
     list-style: none;
+    margin: 0;
     padding: 0;
-    margin: 0 auto; /* Center the list */
-    text-align: left; /* Align text to the left within the centered list */
-    display: inline-block; /* Make the list align to the center */
 }
 
-/* List item adjustments */
 .links-list li {
     margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #eaeaea;
 }
 
-/* Link styles */
 .links-list a {
-    text-decoration: none;
     color: #007bff;
+    text-decoration: none;
     font-size: 18px;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.links-list a:hover, .links-list a:focus {
+    color: #0056b3;
+    transform: translateX(5px);
+}
+
+/* Responsive design for better mobile viewing */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .links-list a {
+        font-size: 16px;
+    }
 }
